@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Contact Abhishek</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/animation.css" />
+  <link href="./css/css.css" rel="stylesheet" type="text/css" />
+  <script src="./js/contact.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div id="navbar-desktop" class="navbar-desktop w-hidden-small w-hidden-tiny w-nav">
+    <nav role="navigation" class="nav-menu-2 w-clearfix w-nav-menu">
+      <a href="index.html" class="nav-link-desktop nav-link-nad w-nav-link">Home</a>
+      <a href="about.html" class="nav-link-desktop w-nav-link">About</a>
+      <a href="writing.html" class="nav-link-desktop w-nav-link">Writing</a>
+      <a href="contact.html" aria-current="page"
+        class="nav-link-desktop nav-link-contact w-nav-link w--current">Contact</a>
+    </nav>
+    <div class="navbar-desktop-container w-container">
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inline-parent inline-hero">
+    <div class="content-parent">
+      <h1 class="title wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay=".2s">Let &#x27;s talk.</h1>
+      <p class="paragraph content-paragraph wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay=".4s">
+        Get in touch via the form below, or by emailing <a href="mailto:abhishekvishala@gmail.com?subject=Hello!"
+          class="link">@ Hello Abhi !</a>
+      </p>
+      <div class="form-parent w-form wow fadeInUp animated" data-wow-duration="1000ms" data-wow-delay=".6s">
+        <form action="" method="post">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-input w-input" autofocus="true" maxlength="256" placeholder="Enter your name"
+            required="" />
+          <label for="email" class="form-label">Email Address:</label>
+          <input type="email" name="email" placeholder="Enter your email address" maxlength="256" required=""
+            class="form-input w-input" />
+          <label for="Message" class="form-label">Message:</label>
+          <textarea placeholder="Enter your message" maxlength="5000" required=""
+            class="form-input form-message w-input"></textarea>
+          <input type="submit" value="Submit" class="form-submit w-button" />
+        </form>
+        <div class="form-success w-form-done" id="thank-you-message">
+          <div class="form-success-wrapper " >
+            <div class="form-success-text ">
+              Thanks for getting in touch! 😃<br />I &#x27;ll get back to you
+              by email as soon as I can.
+            </div>
+            <h4 class="title-link" >
+              <a href="index.html" class="link">
+                <span class="chevron-back"></span>
+                Home
+              </a>
+            </h4>
+          </div>
+        </div>
+        <div class="form-error w-form-fail">
+          <div>
+            Oops! Something went wrong. 😢<br />
+            If the problem persists, please get in touch by emailing
+            <a href="mailto:abhishekvishala@gmail.com?subject=Hello" class="link">abhishekvishala@gmail.com</a>
+            .
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/animation.js"></script>
+</body>
+<script>
+  const form = document.querySelector('form');
+  const thankYouMessage = document.getElementById('thank-you-message');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    thankYouMessage.classList.remove('thank-you-message');
+    setTimeout(() => form.submit(), 2000);
+  });
+</script>
+
+</html>
